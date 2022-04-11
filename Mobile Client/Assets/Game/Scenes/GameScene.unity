@@ -246,7 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003e412c493c43747ac0edffabf576ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 10, y: 10}
+  origin: {x: 0, y: 0}
+  testItem: {fileID: 11400000, guid: 62546fc5ffd5021408358e1873943009, type: 2}
 --- !u!4 &852734268
 Transform:
   m_ObjectHideFlags: 0

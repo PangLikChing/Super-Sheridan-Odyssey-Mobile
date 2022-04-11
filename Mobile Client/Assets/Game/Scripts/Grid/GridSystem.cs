@@ -11,7 +11,7 @@ public class GridSystem
     // height is the amount of rows that the grid map has
     // gridsize is the actual size of a grid in terms of the world
     private int width, height;
-    private float gridSize;
+    public float gridSize;
     private Vector2 origin;
     private int[,] gridArray;
 
@@ -39,7 +39,7 @@ public class GridSystem
             for (int y = 0; y < gridArray.GetLength(1); y++)
             {
                 //debug
-                debugTextArray[x, y] = CreateWorldText(Color.white, gridArray[x, y].ToString(), null, GetWorldPosition(x, y) + new Vector2(gridSize, gridSize) * 0.5f, 20, TextAnchor.MiddleCenter);
+                //debugTextArray[x, y] = CreateWorldText(Color.white, gridArray[x, y].ToString(), null, GetWorldPosition(x, y) + new Vector2(gridSize, gridSize) * 0.5f, 20, TextAnchor.MiddleCenter);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.black, 1000f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.black, 1000f);
                 //debug
@@ -51,14 +51,14 @@ public class GridSystem
         //debug
     }
 
-    private Vector2 GetWorldPosition(int x, int y)
+    public Vector2 GetWorldPosition(int x, int y)
     {
         // x, y times gridSize + origin's position
         return new Vector2(x * gridSize, y * gridSize) + origin;
     }
 
     // Method to convert world position to grid position
-    private void GetGridXY(Vector2 worldPosition, out int x, out int y)
+    public void GetGridXY(Vector2 worldPosition, out int x, out int y)
     {
         // If grid size is 10, origin at (0, 0), world position (5, 5) will be in grid (0, 0)
         x = Mathf.FloorToInt((worldPosition - origin).x / gridSize);
@@ -73,7 +73,9 @@ public class GridSystem
         // Get the x and y grid position
         GetGridXY(worldPosition, out x, out y);
 
+        //debug
         Debug.Log($"x: {x}, y: {y}");
+        //debug
 
         // Set the grid's value
         SetGridValue(x, y, value);
@@ -90,7 +92,7 @@ public class GridSystem
             gridArray[x, y] = value;
 
             //debug
-            debugTextArray[x, y].text = gridArray[x, y].ToString();
+            //debugTextArray[x, y].text = gridArray[x, y].ToString();
             //debug
         }
     }
