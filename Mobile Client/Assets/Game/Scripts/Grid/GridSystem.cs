@@ -13,6 +13,10 @@ public class GridSystem
     private int width, height;
     public float gridSize;
     private Vector2 origin;
+
+    // if the int is 0, it means there is nothing there
+    // if the int is 1, it means there is a tile there
+    // if the int is 2, it means there is a pickup there
     private int[,] gridArray;
 
     //debug

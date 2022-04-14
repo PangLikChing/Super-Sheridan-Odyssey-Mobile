@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
-  m_Name: Spawn Point
+  m_Name: Grass
   m_EditorClassIdentifier: 
-  name: Spawn Point
-  art2dPrefeb: {fileID: 2239307194167070403, guid: 854798f39a811c7468f56adb6d97c57f, type: 3}
-  gridWidth: 2
-  gridHeight: 2
+  name: Grass
+  art2dPrefeb: {fileID: 7886586742996922142, guid: 556a70674146f8f4f95e876dd9eaafb8, type: 3}
+  gridWidth: 1
+  gridHeight: 1
+  isTile: 0
