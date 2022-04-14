@@ -39,8 +39,10 @@ MonoBehaviour:
   - {x: 4, y: 10}
   - {x: 5, y: 10}
   - {x: 1, y: 11}
+  - {x: 3, y: 11}
   - {x: 5, y: 11}
   - {x: 1, y: 12}
+  - {x: 3, y: 12}
   - {x: 5, y: 12}
   - {x: 1, y: 13}
   - {x: 5, y: 13}
@@ -82,7 +84,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: d0e385421a1978f4bb027a1b70786523, type: 2}
+  - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: d0e385421a1978f4bb027a1b70786523, type: 2}
+  - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: d0e385421a1978f4bb027a1b70786523, type: 2}
