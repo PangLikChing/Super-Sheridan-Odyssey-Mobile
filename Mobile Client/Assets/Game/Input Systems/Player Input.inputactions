@@ -1,0 +1,12 @@
+{
+    "name": "Player Input",
+    "maps": [
+        {
+            "name": "Mobile Input",
+            "id": "bc7a90cd-ba26-4cdf-96a2-4b094c31cc9d",
+            "actions": [],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
