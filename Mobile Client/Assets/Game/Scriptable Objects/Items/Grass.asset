@@ -16,4 +16,4 @@ MonoBehaviour:
   art2dPrefeb: {fileID: 7886586742996922142, guid: 556a70674146f8f4f95e876dd9eaafb8, type: 3}
   gridWidth: 1
   gridHeight: 1
-  isTile: 0
+  isTile: 1

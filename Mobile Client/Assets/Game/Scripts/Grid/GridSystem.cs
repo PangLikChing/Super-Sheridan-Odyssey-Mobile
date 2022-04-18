@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Grid system's base
+/// Grid system's base class
 /// </summary>
 public class GridSystem
 {
@@ -32,27 +32,26 @@ public class GridSystem
         this.origin = origin;
         gridArray = new int[width, height];
 
-        //debug
+        // debug
         debugTextArray = new TextMesh[width, height];
-        //debug
+        // debug
 
+        // debug
         // Loop through the x axis
         for (int x = 0; x < gridArray.GetLength(0); x++)
         {
             // Loop through the y axis
             for (int y = 0; y < gridArray.GetLength(1); y++)
             {
-                //debug
                 //debugTextArray[x, y] = CreateWorldText(Color.white, gridArray[x, y].ToString(), null, GetWorldPosition(x, y) + new Vector2(gridSize, gridSize) * 0.5f, 20, TextAnchor.MiddleCenter);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.black, 1000f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.black, 1000f);
-                //debug
             }
         }
-        //debug
+
         Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.black, 1000f);
         Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.black, 1000f);
-        //debug
+        // debug
     }
 
     public Vector2 GetWorldPosition(int x, int y)
@@ -76,10 +75,6 @@ public class GridSystem
 
         // Get the x and y grid position
         GetGridXY(worldPosition, out x, out y);
-
-        //debug
-        Debug.Log($"x: {x}, y: {y}");
-        //debug
 
         // Set the grid's value
         SetGridValue(x, y, value);
@@ -130,32 +125,32 @@ public class GridSystem
         }
     }
 
-    //debug
-    public static TextMesh CreateWorldText(Color color, string text, Transform parent = null, Vector2 localPosition = default(Vector2), int fontSize = 40, TextAnchor textAnchor = TextAnchor.MiddleCenter, TextAlignment textAlignment = TextAlignment.Center, int sortingOrder = 1)
-    {
-        if (color == null)
-        {
-            color = Color.white;
-        }
-        return CreateWorldText(parent, text, localPosition, fontSize, (Color)color, textAnchor, textAlignment, sortingOrder);
-    }
+    #region Debug
+    //public static TextMesh CreateWorldText(Color color, string text, Transform parent = null, Vector2 localPosition = default(Vector2), int fontSize = 40, TextAnchor textAnchor = TextAnchor.MiddleCenter, TextAlignment textAlignment = TextAlignment.Center, int sortingOrder = 1)
+    //{
+    //    if (color == null)
+    //    {
+    //        color = Color.white;
+    //    }
+    //    return CreateWorldText(parent, text, localPosition, fontSize, (Color)color, textAnchor, textAlignment, sortingOrder);
+    //}
 
-    public static TextMesh CreateWorldText(Transform parent, string text, Vector2 localPosition,
-        int fontSize, Color color, TextAnchor textAnchor, TextAlignment textAlignment, int sortingOrder)
-    {
-        GameObject gameObject = new GameObject("World_Text", typeof(TextMesh));
-        Transform transform = gameObject.transform;
-        transform.SetParent(parent, false);
-        transform.localPosition = localPosition;
+    //public static TextMesh CreateWorldText(Transform parent, string text, Vector2 localPosition,
+    //    int fontSize, Color color, TextAnchor textAnchor, TextAlignment textAlignment, int sortingOrder)
+    //{
+    //    GameObject gameObject = new GameObject("World_Text", typeof(TextMesh));
+    //    Transform transform = gameObject.transform;
+    //    transform.SetParent(parent, false);
+    //    transform.localPosition = localPosition;
 
-        TextMesh textMesh = gameObject.GetComponent<TextMesh>();
-        textMesh.anchor = textAnchor;
-        textMesh.alignment = textAlignment;
-        textMesh.text = text;
-        textMesh.color = color;
-        textMesh.GetComponent<MeshRenderer>().sortingOrder = sortingOrder;
+    //    TextMesh textMesh = gameObject.GetComponent<TextMesh>();
+    //    textMesh.anchor = textAnchor;
+    //    textMesh.alignment = textAlignment;
+    //    textMesh.text = text;
+    //    textMesh.color = color;
+    //    textMesh.GetComponent<MeshRenderer>().sortingOrder = sortingOrder;
 
-        return textMesh;
-    }
-    //debug
+    //    return textMesh;
+    //}
+    #endregion
 }
