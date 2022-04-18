@@ -13,6 +13,8 @@ public class Item : ScriptableObject
 
     public int gridHeight = 0;
 
+    public bool isTile = false;
+
     public List<Vector2Int> GetAllOccupiedGrid(Vector2Int origin)
     {
         // Initialize a temp List
