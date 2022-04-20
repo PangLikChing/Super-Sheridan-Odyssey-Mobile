@@ -12,7 +12,7 @@ public class GridSystem
     // gridsize is the actual size of a grid in terms of the world
     private int width, height;
     public float gridSize;
-    private Vector2 origin;
+    private Vector3 origin;
 
     // if the int is 0, it means there is nothing there
     // if the int is 1, it means there is a tile there
@@ -54,41 +54,41 @@ public class GridSystem
         // debug
     }
 
-    public Vector2 GetWorldPosition(int x, int y)
+    public Vector2 GetWorldPosition(int x, int z)
     {
         // x, y times gridSize + origin's position
-        return new Vector2(x * gridSize, y * gridSize) + origin;
+        return new Vector3(x * gridSize, z * gridSize) + origin;
     }
 
     // Method to convert world position to grid position
-    public void GetGridXY(Vector2 worldPosition, out int x, out int y)
+    public void GetGridXY(Vector3 worldPosition, out int x, out int z)
     {
         // If grid size is 10, origin at (0, 0), world position (5, 5) will be in grid (0, 0)
         x = Mathf.FloorToInt((worldPosition - origin).x / gridSize);
-        y = Mathf.FloorToInt((worldPosition - origin).y / gridSize);
+        z = Mathf.FloorToInt((worldPosition - origin).z / gridSize);
     }
 
     public void SetValueWithMouse(Vector2 worldPosition, int value)
     {
         // intialize temp ints
-        int x, y;
+        int x, z;
 
         // Get the x and y grid position
-        GetGridXY(worldPosition, out x, out y);
+        GetGridXY(worldPosition, out x, out z);
 
         // Set the grid's value
-        SetGridValue(x, y, value);
+        SetGridValue(x, z, value);
     }
 
-    public void SetGridValue(int x, int y, int value)
+    public void SetGridValue(int x, int z, int value)
     {
         // Check if the value is valid
         // If x and y is positive
         // If x or y is bigger than there max value
-        if (x >= 0 && y >= 0 && x < width && y < height)
+        if (x >= 0 && z >= 0 && x < width && z < height)
         {
             // Set the value to that grid
-            gridArray[x, y] = value;
+            gridArray[x, z] = value;
 
             //debug
             //debugTextArray[x, y].text = gridArray[x, y].ToString();
@@ -99,24 +99,24 @@ public class GridSystem
     public int GetValueWithMouse(Vector2 worldPosition)
     {
         // Intialize temp ints
-        int x, y;
+        int x, z;
 
         // Get the x and y grid position
-        GetGridXY(worldPosition, out x, out y);
+        GetGridXY(worldPosition, out x, out z);
 
         // Return that grid's value
-        return GetGridValue(x, y);
+        return GetGridValue(x, z);
     }
 
-    public int GetGridValue(int x, int y)
+    public int GetGridValue(int x, int z)
     {
         // Check if the value is valid
         // If x and y is positive
         // If x or y is bigger than there max value
-        if (x >= 0 && y >= 0 && x < width && y < height)
+        if (x >= 0 && z >= 0 && x < width && z < height)
         {
             // Return the value from that grid
-            return gridArray[x, y];
+            return gridArray[x, z];
         }
         else
         {
