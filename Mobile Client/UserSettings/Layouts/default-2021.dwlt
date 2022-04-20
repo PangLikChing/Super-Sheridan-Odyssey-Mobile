@@ -51,7 +51,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 10572
+=======
+  controlID: 95
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
   controlID: 95
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -79,6 +83,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1097
     y: 0
     width: 807
@@ -88,6 +93,10 @@ MonoBehaviour:
 =======
     x: 1161
     y: 0
+=======
+    x: 1161
+    y: 0
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     x: 1161
     y: 0
@@ -126,11 +135,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 271
     height: 717
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 =======
+=======
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
@@ -164,9 +176,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 717
     width: 1097
     height: 334
+=======
+    y: 691
+    width: 1161
+    height: 360
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     y: 691
     width: 1161
@@ -283,7 +301,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1097
+=======
+    width: 1161
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     width: 1161
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -300,7 +322,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 10479
+=======
+  controlID: 88
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
   controlID: 88
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -332,12 +358,21 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1097
     height: 717
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 10480
+=======
+    width: 1161
+    height: 691
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 89
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     width: 1161
     height: 691
@@ -380,6 +415,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 271
     y: 0
     width: 826
@@ -389,6 +425,10 @@ MonoBehaviour:
 =======
     x: 388
     y: 0
+=======
+    x: 388
+    y: 0
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     x: 388
     y: 0
@@ -431,11 +471,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 279
     y: 81
     width: 824
     height: 696
 =======
+=======
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
@@ -446,6 +489,9 @@ MonoBehaviour:
     height: 670
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
+=======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -484,7 +530,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     scale: 27
+=======
+    scale: 37
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     scale: 37
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -524,9 +574,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 798
     width: 1096
     height: 313
+=======
+    y: 772
+    width: 1160
+    height: 339
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     y: 772
     width: 1160
@@ -562,7 +618,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Game/Scripts/Grid
+=======
+    - Assets/Game/Textures/UI
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     - Assets/Game/Textures/UI
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -580,7 +640,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Assets/Game/Scripts/Grid
+=======
+  - Assets/Game/Textures/UI
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
   - Assets/Game/Textures/UI
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -599,11 +663,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 189d0000
     m_LastClickedID: 40216
     m_ExpandedIDs: 00000000229700002497000062970000a69d00009aa6000000ca9a3b
 =======
+=======
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
@@ -614,6 +681,9 @@ MonoBehaviour:
     m_ExpandedIDs: 000000004462000046620000486200004a6200004c620000606200006c6200008083000082830000848300005e8b0000648b0000a4ba000000ca9a3b
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
+=======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -649,7 +719,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000002297000024970000629700009aa6000000ca9a3b
+=======
+    m_ExpandedIDs: 000000004462000046620000486200004a6200004c620000
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     m_ExpandedIDs: 000000004462000046620000486200004a6200004c620000
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -737,9 +811,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1105
     y: 81
     width: 806
+=======
+    x: 1169
+    y: 81
+    width: 742
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     x: 1169
     y: 81
@@ -798,8 +878,13 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 270
     height: 696
+=======
+    width: 387
+    height: 670
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     width: 387
     height: 670
@@ -822,9 +907,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: badefaff606efbfff487ffff
       m_LastClickedID: -30732
       m_ExpandedIDs: c0c0ffff42fbffff
+=======
+      m_SelectedIDs: f288ffff
+      m_LastClickedID: -30478
+      m_ExpandedIDs: 42d2feffb076fffff288ffff348cffff96eaffff08f3ffff94f9ffffc0f9ffff14fbffff0e61000066610000
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
       m_SelectedIDs: f288ffff
       m_LastClickedID: -30478
@@ -886,11 +977,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 279
     y: 81
     width: 824
     height: 602
 =======
+=======
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
@@ -901,6 +995,9 @@ MonoBehaviour:
     height: 670
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
+=======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
 >>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
@@ -1132,9 +1229,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 28.070782, y: 107.23297, z: -1.7923603}
     speed: 2
     m_Value: {x: 28.070782, y: 107.23297, z: -1.7923603}
+=======
+    m_Target: {x: 1114.1642, y: 888.32416, z: -17.41509}
+    speed: 2
+    m_Value: {x: 1114.1642, y: 888.32416, z: -17.41509}
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     m_Target: {x: 1114.1642, y: 888.32416, z: -17.41509}
     speed: 2
@@ -1203,9 +1306,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 785.2801
     speed: 2
     m_Value: 785.2801
+=======
+    m_Target: 1749.2367
+    speed: 2
+    m_Value: 1749.2367
+>>>>>>> parent of 2e5f7c75 (Flapped map, Set up photon)
 =======
     m_Target: 1749.2367
     speed: 2
