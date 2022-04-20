@@ -1,9 +1,9 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-Assets/AssetStoreTools*
+Mobile Client/[Ll]ibrary/
+Mobile Client/[Tt]emp/
+Mobile Client/[Oo]bj/
+Mobile Client/[Bb]uild/
+Mobile Client/[Bb]uilds/
+Mobile Client/Assets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
