@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
   m_Name: Teleporter
   m_EditorClassIdentifier: 
-  name: Teleporter
+  Name: Teleporter
   art2dPrefeb: {fileID: 3941490731392180078, guid: 7cf98fed4d8ad7d429b823035b611816, type: 3}
   gridWidth: 1
   gridHeight: 1

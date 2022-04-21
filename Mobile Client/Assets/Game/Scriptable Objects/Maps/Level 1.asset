@@ -104,3 +104,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 672e8034f7a76834ba3d0065b4aa92ef, type: 2}
   - {fileID: 11400000, guid: 8cbf3a6d614747c4bad81d4526f55d91, type: 2}
   - {fileID: 11400000, guid: aaf09386f27b7cf4bbca13b523cb721a, type: 2}
+  AICoords:
+  - {x: 1, y: 10}
+  - {x: 3, y: 12}
+  - {x: 5, y: 10}
+  AITokens:
+  - {fileID: 11400000, guid: 90e9a8586ecb3a841a067c0b0c187b3b, type: 2}
+  - {fileID: 11400000, guid: 76178f6c3e0377649bdd649c9ab4cdba, type: 2}
+  - {fileID: 11400000, guid: a8effab9cccf17a408078596a662ebf7, type: 2}

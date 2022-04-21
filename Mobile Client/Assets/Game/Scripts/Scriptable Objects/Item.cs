@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Item : ScriptableObject
 {
-    public string name = "";
+    public string Name = "";
 
     public Transform art2dPrefeb;
 

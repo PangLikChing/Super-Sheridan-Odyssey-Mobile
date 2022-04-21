@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  name: Water
+  Name: Water
   art2dPrefeb: {fileID: 8461135610849290504, guid: 28e255804846ebe4aacbad2f827d971c, type: 3}
   gridWidth: 1
   gridHeight: 1

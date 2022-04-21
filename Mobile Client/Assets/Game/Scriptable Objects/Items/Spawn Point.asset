@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
   m_Name: Spawn Point
   m_EditorClassIdentifier: 
-  name: Spawn Point
+  Name: Spawn Point
   art2dPrefeb: {fileID: 2239307194167070403, guid: 854798f39a811c7468f56adb6d97c57f, type: 3}
   gridWidth: 1
   gridHeight: 1

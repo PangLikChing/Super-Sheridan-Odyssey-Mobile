@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
   m_Name: Trap
   m_EditorClassIdentifier: 
-  name: Trap
+  Name: Trap
   art2dPrefeb: {fileID: 3622320889217017922, guid: 37d1f420a6d75074d85f639017618989, type: 3}
   gridWidth: 1
   gridHeight: 1

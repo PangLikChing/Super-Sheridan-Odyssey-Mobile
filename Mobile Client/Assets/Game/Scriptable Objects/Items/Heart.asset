@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
   m_Name: Heart
   m_EditorClassIdentifier: 
-  name: Heart
+  Name: Heart
   art2dPrefeb: {fileID: 3876776635304839230, guid: a105f369bf138ea42856b8f2c707442b, type: 3}
   gridWidth: 1
   gridHeight: 1
+  isTile: 0

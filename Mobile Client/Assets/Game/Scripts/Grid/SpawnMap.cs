@@ -86,6 +86,33 @@ public class SpawnMap : MonoBehaviour
                 break;
             }
         }
+
+        // Initialize the AI tokens on the map
+        // For every grid that has an AI in the map scripable object
+        for (int i = 0; i < map.AICoords.Length; i++)
+        {
+            try
+            {
+                // Cache the currentTile and currentTileCoord from the map
+                AI currentAI = map.AITokens[i];
+                Vector2Int currentAICoord = map.AICoords[i];
+
+                // The position is at the middle of the grid
+                // grid's world position * grid size * that item's grid width / height / 2
+                Transform spawnedItem = Instantiate(currentAI.art2dPrefeb,
+                    new Vector3(gridSystem.GetWorldPosition(currentAICoord.x, currentAICoord.y).x + gridSystem.gridSize * 0.5f, 0, gridSystem.GetWorldPosition(currentAICoord.x, currentAICoord.y).y + gridSystem.gridSize * 0.5f),
+                Quaternion.Euler(90, 0, 0)
+                );
+            }
+            catch (Exception e)
+            {
+                // Throw a debug message
+                Debug.Log(e);
+
+                // Break out of the loop
+                break;
+            }
+        }
         #endregion
     }
 }

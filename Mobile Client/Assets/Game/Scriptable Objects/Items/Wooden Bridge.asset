@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
   m_Name: Wooden Bridge
   m_EditorClassIdentifier: 
-  name: Wooden Bridge
+  Name: Wooden Bridge
   art2dPrefeb: {fileID: 826920966814098054, guid: 74a2f9c3b51868646bb4f8994b47286b, type: 3}
   gridWidth: 1
   gridHeight: 1

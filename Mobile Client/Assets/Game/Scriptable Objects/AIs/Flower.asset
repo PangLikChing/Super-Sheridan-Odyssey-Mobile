@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e25f5e24478ffac489fc76ce2d5c7e51, type: 3}
-  m_Name: Win Trigger
+  m_Script: {fileID: 11500000, guid: 528934922969bdb4f9472d1589767e3e, type: 3}
+  m_Name: Flower
   m_EditorClassIdentifier: 
-  Name: Win Trigger
-  art2dPrefeb: {fileID: 5191556003251553330, guid: c7f2de1da0b03af47b6f06a6e333b262, type: 3}
-  gridWidth: 1
-  gridHeight: 1
-  isTile: 1
+  Name: Flower
+  art2dPrefeb: {fileID: 5736464844613332157, guid: ab72c12c716b27a4fb61f2573088987d, type: 3}
