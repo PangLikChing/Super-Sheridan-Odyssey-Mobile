@@ -19,9 +19,7 @@ public class GridSystem
     // if the int is 2, it means there is a pickup there
     private int[,] gridArray;
 
-    //debug
-    private TextMesh[,] debugTextArray;
-    //debug
+    public Transform[,] occupyingItemArray;
 
     public GridSystem(int width, int height, float gridSize, Vector2 origin)
     {
@@ -31,6 +29,7 @@ public class GridSystem
         this.gridSize = gridSize;
         this.origin = origin;
         gridArray = new int[width, height];
+        occupyingItemArray = new Transform[width, height];
     }
 
     public Vector2 GetWorldPosition(int x, int y)
