@@ -110,7 +110,7 @@ public class ItemSpawner: MonoBehaviour
                     Vector3 currentMousePosition = Camera.main.ScreenToWorldPoint(inputActions.MobileInput.Touch0.ReadValue<TouchState>().position);
 
                     // Get the grid position that the player is targeting
-                    gridSystem.GetGridXY(currentMousePosition, out x, out y);
+                    gridSystem.GetGridXZ(currentMousePosition, out x, out y);
 
                     // Get the list that the item will occupy
                     List<Vector2Int> occupiedGrid = spawnItem.GetAllOccupiedGrid(new Vector2Int(x, y));
@@ -150,10 +150,13 @@ public class ItemSpawner: MonoBehaviour
                         {
                             // The position is at the middle of the grid
                             // grid's world position * grid size * that item's grid width / height / 2
-                            Instantiate(spawnItem.art2dPrefeb,
-                                new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f, 0),
-                                Quaternion.identity
+                            Transform spawnedItem = Instantiate(spawnItem.art2dPrefeb,
+                                new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
+                                Quaternion.Euler(90, 0, 0)
                             );
+
+                            // Save the occupying transform
+                            gridSystem.occupyingItemArray[x, y] = spawnedItem;
 
                             // For every occupying grid
                             for (int j = 0; j < occupiedGrid.Count; j++)
@@ -167,8 +170,8 @@ public class ItemSpawner: MonoBehaviour
                             // The position is at the middle of the grid
                             // grid's world position * grid size * that item's grid width / height / 2
                             Instantiate(spawnItem.art2dPrefeb,
-                                new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f, 0),
-                                Quaternion.identity
+                                new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
+                                Quaternion.Euler(90, 0, 0)
                             );
 
                             // For every occupying grid
@@ -183,7 +186,7 @@ public class ItemSpawner: MonoBehaviour
                     else
                     {
                         // Throw a cannot build error message
-                        //Debug.Log($"Cannot build here dude. There is something in the way");
+                        Debug.Log($"Cannot build here dude.");
                     }
 
                     // Reset spawnItem to null

@@ -34,8 +34,8 @@ public class SpawnMap : MonoBehaviour
                 // The position is at the middle of the grid
                 // grid's world position * grid size * that item's grid width / height / 2
                 Instantiate(waterItem.art2dPrefeb,
-                    new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * waterItem.gridWidth * 0.5f, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * waterItem.gridHeight * 0.5f, 0),
-                    Quaternion.identity
+                    new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * waterItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * waterItem.gridHeight * 0.5f),
+                    Quaternion.Euler(90, 0, 0)
                 );
             }
         }
@@ -55,10 +55,13 @@ public class SpawnMap : MonoBehaviour
                 {
                     // The position is at the middle of the grid
                     // grid's world position * grid size * that item's grid width / height / 2
-                    Instantiate(currentTile.art2dPrefeb,
-                        new Vector3(gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).x + gridSystem.gridSize * currentTile.gridWidth * 0.5f, gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).y + gridSystem.gridSize * currentTile.gridHeight * 0.5f, 0),
-                        Quaternion.identity
+                    Transform spawnedItem = Instantiate(currentTile.art2dPrefeb,
+                        new Vector3(gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).x + gridSystem.gridSize * currentTile.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).y + gridSystem.gridSize * currentTile.gridWidth * 0.5f),
+                    Quaternion.Euler(90, 0, 0)
                     );
+
+                    // Save the occupying transform
+                    gridSystem.occupyingItemArray[map.gridCoord[i].x, map.gridCoord[i].y] = spawnedItem;
 
                     // Set that grid's value to 1
                     gridSystem.SetGridValue(currentTileCoord.x, currentTileCoord.y, 1);
@@ -69,8 +72,8 @@ public class SpawnMap : MonoBehaviour
                     // The position is at the middle of the grid
                     // grid's world position * grid size * that item's grid width / height / 2
                     Instantiate(map.gridTile[i].art2dPrefeb,
-                        new Vector3(gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).x + gridSystem.gridSize * currentTile.gridWidth * 0.5f, gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).y + gridSystem.gridSize * currentTile.gridHeight * 0.5f, 0),
-                        Quaternion.identity
+                        new Vector3(gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).x + gridSystem.gridSize * currentTile.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(currentTileCoord.x, currentTileCoord.y).y + gridSystem.gridSize * currentTile.gridWidth * 0.5f),
+                    Quaternion.Euler(90, 0, 0)
                     );
                 }
             }
