@@ -14,8 +14,4 @@ public class Map : ScriptableObject
     public Vector2Int[] gridCoord;
 
     public Item[] gridTile;
-
-    public Vector2Int[] AICoords;
-
-    public AI[] AITokens;
 }
