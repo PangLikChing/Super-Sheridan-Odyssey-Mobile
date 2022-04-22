@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class WinScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public RPCManager manager;
+
+    //private void Start()
+    //{
+
+    //    manager.gameWon.AddListener(Show);
+
+    //}
+
+    //public void Show()
+    //{
+    //    Debug.Log("game won");
+    //    gameObject.SetActive(true);
+    //}
 }

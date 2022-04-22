@@ -1,31 +1,43 @@
+using ExitGames.Client.Photon;
 using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RPCManager : MonoBehaviour
+public class RPCManager : MonoBehaviour, IOnEventCallback
 {
-    public GameObject winScreen, loseScreen;
-
-    void Start()
+    public UnityEvent gameWon;
+    public UnityEvent gameLost;
+    public GameObject winScreen;
+    public GameObject loseScreen;
+    private void OnEnable()
     {
-        winScreen = GameObject.Find("Win Screen").gameObject;
-
-        loseScreen = GameObject.Find("Lose Screen").gameObject;
+        PhotonNetwork.AddCallbackTarget(this);
     }
 
-    [PunRPC]
-    public void OnVictory()
+    private void OnDisable()
     {
-        Debug.Log("I won");
-        winScreen.SetActive(true);
+        PhotonNetwork.RemoveCallbackTarget(this);
     }
 
-    [PunRPC]
-    public void OnLose()
+    public void OnEvent(EventData photonEvent)
     {
-        Debug.Log("I lose");
-        loseScreen.SetActive(true);
+        byte eventCode = photonEvent.Code;
+        if (eventCode == 0)
+        {
+            int data = (int)photonEvent.CustomData;
+            if (data == 0)
+            {
+                gameWon.Invoke();
+                winScreen.SetActive(true);
+            }
+            else
+            {
+                gameLost.Invoke();
+                loseScreen.SetActive(true);
+            }
+        }
     }
 }

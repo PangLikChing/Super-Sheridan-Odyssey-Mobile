@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class LoseScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public RPCManager manager;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //private void Update()
+    //{
+
+    //    manager.gameLost.AddListener(Show);
+
+    //}
+
+    //public void Show()
+    //{
+    //    gameObject.SetActive(true);
+    //}
 }

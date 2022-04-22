@@ -45,8 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a016c77db0ba6489c51cb0ed36a3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 0}
-  loseScreen: {fileID: 0}
+  gameWon:
+    m_PersistentCalls:
+      m_Calls: []
+  gameLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7511903460400296146
 MonoBehaviour:
   m_ObjectHideFlags: 0

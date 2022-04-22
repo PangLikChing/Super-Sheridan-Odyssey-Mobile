@@ -8,8 +8,10 @@ public class OptionMenu : MonoBehaviourPunCallbacks
 {
     public void QuitLobby()
     {
-
-        PhotonNetwork.LeaveRoom();
+        if(PhotonNetwork.CurrentRoom!=null)
+            PhotonNetwork.LeaveRoom();
+        else
+            SceneManager.LoadScene(0);
 
     }
 
