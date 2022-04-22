@@ -31,6 +31,7 @@ public class RPCManager : MonoBehaviour, IOnEventCallback
             if (data == 0)
             {
                 gameWon.Invoke();
+                Debug.Log("win");
                 winScreen.SetActive(true);
             }
             else
