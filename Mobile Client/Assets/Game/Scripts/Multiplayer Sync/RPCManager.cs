@@ -6,24 +6,19 @@ using UnityEngine.Events;
 
 public class RPCManager : MonoBehaviour
 {
-    public UnityEvent Victory;
-    public UnityEvent GameOver;
-    private PhotonView PV;
+    public GameObject winScreen, loseScreen;
 
-    private void Start()
+    [PunRPC]
+    public void OnVictory()
     {
-        PV = GetComponent<PhotonView>();
+        Debug.Log("I won");
+        winScreen.SetActive(true);
     }
 
     [PunRPC]
-    public void GameWon()
+    public void OnLose()
     {
-        Victory.Invoke();
-    }
-
-    [PunRPC]
-    public void GameLost()
-    {
-        GameOver.Invoke();
+        Debug.Log("I lose");
+        loseScreen.SetActive(true);
     }
 }
