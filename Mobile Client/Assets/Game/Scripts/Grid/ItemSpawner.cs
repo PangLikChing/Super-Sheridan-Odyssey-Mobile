@@ -175,7 +175,7 @@ public class ItemSpawner: MonoBehaviour
                             // The position is at the middle of the grid
                             // grid's world position * grid size * that item's grid width / height / 2
                             PhotonNetwork.Instantiate(spawnItem.art2dPrefeb.name,
-                                new Vector3(gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
+                                new Vector3(gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 1.3f, gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
                                 Quaternion.Euler(90, 0, 0)
                             );
 
