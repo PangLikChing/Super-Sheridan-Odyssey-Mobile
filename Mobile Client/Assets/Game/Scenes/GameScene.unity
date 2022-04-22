@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: b4ad9e2c953670845a9bcf2f6f28f9fc, type: 2}
-  origin: {x: -24, y: -12}
+  origin: {x: 0, y: -8}
   cellSize: 4
   waterItem: {fileID: 11400000, guid: 3c0c8ec1672ec454b8b152bdbda750c4, type: 2}
 --- !u!1 &1738669825

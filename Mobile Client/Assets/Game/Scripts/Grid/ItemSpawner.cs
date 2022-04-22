@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.LowLevel;
+using Photon.Pun;
 
 /// <summary>
 /// This is a component for spawning items with mouse release
@@ -112,6 +113,8 @@ public class ItemSpawner: MonoBehaviour
                     // Get the grid position that the player is targeting
                     gridSystem.GetGridXZ(currentMousePosition, out x, out y);
 
+                    Debug.Log(currentMousePosition);
+
                     // Get the list that the item will occupy
                     List<Vector2Int> occupiedGrid = spawnItem.GetAllOccupiedGrid(new Vector2Int(x, y));
 
@@ -144,14 +147,16 @@ public class ItemSpawner: MonoBehaviour
                     if (canBuild)
                     {
                         // Put down the object
+                        Debug.Log(new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f));
 
                         // If that item is a tile
                         if (spawnItem.isTile == true)
                         {
+
                             // The position is at the middle of the grid
                             // grid's world position * grid size * that item's grid width / height / 2
                             Transform spawnedItem = Instantiate(spawnItem.art2dPrefeb,
-                                new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
+                                new Vector3(gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
                                 Quaternion.Euler(90, 0, 0)
                             );
 
@@ -169,8 +174,8 @@ public class ItemSpawner: MonoBehaviour
                         {
                             // The position is at the middle of the grid
                             // grid's world position * grid size * that item's grid width / height / 2
-                            Instantiate(spawnItem.art2dPrefeb,
-                                new Vector3(gridSystem.GetWorldPosition(x, y).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x, y).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
+                            PhotonNetwork.Instantiate(spawnItem.art2dPrefeb.name,
+                                new Vector3(gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).x + gridSystem.gridSize * spawnItem.gridWidth * 0.5f, 0, gridSystem.GetWorldPosition(x - gridSystem.origin.x / gridSystem.gridSize, y - gridSystem.origin.y / gridSystem.gridSize).y + gridSystem.gridSize * spawnItem.gridHeight * 0.5f),
                                 Quaternion.Euler(90, 0, 0)
                             );
 

@@ -12,7 +12,7 @@ public class GridSystem
     // gridsize is the actual size of a grid in terms of the world
     private int width, height;
     public float gridSize;
-    private Vector3 origin;
+    public Vector3 origin;
 
     // if the int is 0, it means there is nothing there
     // if the int is 1, it means there is a tile there
@@ -32,7 +32,7 @@ public class GridSystem
         occupyingItemArray = new Transform[width, height];
     }
 
-    public Vector2 GetWorldPosition(int x, int y)
+    public Vector2 GetWorldPosition(float x, float y)
     {
         // x, y times gridSize + origin's position
         return new Vector3(x * gridSize, y * gridSize) + origin;
@@ -67,10 +67,6 @@ public class GridSystem
         {
             // Set the value to that grid
             gridArray[x, y] = value;
-
-            //debug
-            //debugTextArray[x, y].text = gridArray[x, y].ToString();
-            //debug
         }
     }
 
