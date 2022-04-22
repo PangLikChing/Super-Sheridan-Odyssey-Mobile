@@ -8,6 +8,13 @@ public class RPCManager : MonoBehaviour
 {
     public GameObject winScreen, loseScreen;
 
+    void start()
+    {
+        winScreen = GameObject.Find("Win Screen");
+
+        loseScreen = GameObject.Find("Lose Screen");
+    }
+
     [PunRPC]
     public void OnVictory()
     {
