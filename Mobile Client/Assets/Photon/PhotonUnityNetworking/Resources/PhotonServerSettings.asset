@@ -44,6 +44,8 @@ MonoBehaviour:
   - SyncItemSpawn
   - GameLost
   - GameWon
+  - OnLose
+  - OnVictory
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
