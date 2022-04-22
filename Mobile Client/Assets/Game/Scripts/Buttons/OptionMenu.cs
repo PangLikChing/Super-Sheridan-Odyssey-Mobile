@@ -1,12 +1,15 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class OptionMenu : MonoBehaviour
+public class OptionMenu : MonoBehaviourPunCallbacks
 {
     public void QuitLobby()
     {
-        // Quit the lobby
+
+        PhotonNetwork.LeaveRoom();
 
     }
 
@@ -16,5 +19,10 @@ public class OptionMenu : MonoBehaviour
         Application.Quit();
 
         Debug.Log("Quit");
+    }
+
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene(0);
     }
 }
