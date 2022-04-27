@@ -2402,7 +2402,7 @@ GameObject:
   - component: {fileID: 1755786792}
   - component: {fileID: 1755786793}
   m_Layer: 5
-  m_Name: Bridge Button
+  m_Name: Rock Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2448,7 +2448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f76ed2e7a200494a8ed0762a0339429, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1cd4db0f074b2234781230c0c3e2cb59, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2523,7 +2523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSpawner: {fileID: 852734267}
-  holdItem: {fileID: 11400000, guid: c5bb79d255277474f8e28986096bf5ec, type: 2}
+  holdItem: {fileID: 11400000, guid: 841f3fd52ab389140bd516bf35ad69d7, type: 2}
 --- !u!1 &1925346838
 GameObject:
   m_ObjectHideFlags: 0

@@ -174,9 +174,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         }
     }
     public MobileInputActions @MobileInput => new MobileInputActions(this);
-
-    public object Touch { get; internal set; }
-
     public interface IMobileInputActions
     {
         void OnTouch0(InputAction.CallbackContext context);
